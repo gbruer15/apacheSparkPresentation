@@ -24,7 +24,7 @@ if __name__ == "__main__":
                   .map(lambda word: (word, 1)) \
                   .reduceByKey(add)
 
-    # Now actually do it?
+    # Now bring those results all back to the master process
     output = counts.collect()
 
     # Print out the results
@@ -32,10 +32,3 @@ if __name__ == "__main__":
         print("%s: %i" % (word, count))
 
     spark.stop()
-
-
-# text_file = sc.textFile("hdfs://...")
-# counts = text_file.flatMap(lambda line: line.split(" ")) \
-#              .map(lambda word: (word, 1)) \
-#              .reduceByKey(lambda a, b: a + b)
-# counts.saveAsTextFile("hdfs://...")

@@ -18,6 +18,7 @@ if __name__ == "__main__":
     # This function throws a dart within the unit square and returns 1 if it lands 
     # in the unit circle
     def f(_):
+        # Pick two random numbers between -1 and 1
         x = random() * 2 - 1
         y = random() * 2 - 1
         return 1 if x ** 2 + y ** 2 < 1 else 0
