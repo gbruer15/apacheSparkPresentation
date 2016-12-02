@@ -29,6 +29,8 @@ The mapping part is trivially parallelizable by sharing the mapping work among d
 
 The reduce part requires coordination between nodes, but it is farily easily solved.
 
+Thus MapReduce is easily scalable.
+
 
 ## But I thought MapReduce from Hadoop already does that?
 
